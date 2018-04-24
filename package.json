@@ -55,11 +55,12 @@
     "axios": "^0.16.1",
     "d3": "^5.1.0",
     "element-ui": "^2.3.4",
-    "jquery": "^3.3.1",
+    "jquery": "^1.11.3",
     "vue": "^2.3.3",
     "vue-electron": "^1.0.6",
     "vue-router": "^2.5.3",
-    "vuex": "^2.3.1"
+    "vuex": "^2.3.1",
+    "vue-kindeditor": "^0.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
