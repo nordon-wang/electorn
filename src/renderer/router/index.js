@@ -17,17 +17,22 @@ export default new Router({
     {
       path: '/',
       name: 'landing-page',
-      component: require('@/components/LandingPage').default
+      component: require('@/components/index').default
     },
     {
       path: '/news',
       name: 'news-page',
-      component: news
+      component: () => import('../components/NewsManege')
     },
     {
       path: '/article',
-      name: 'news-page',
-      component: article
+      name: 'article-page',
+      component: () => import('../components/ArticleManege')
+    },
+    {
+      path: '/lp',
+      name: 'lp-page',
+      component:  require('@/components/LandingPage.vue').default
     },
     {
       path: '*',
