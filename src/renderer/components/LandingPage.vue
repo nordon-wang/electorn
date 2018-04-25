@@ -116,21 +116,21 @@ export default {
         }
     },
     async created() {
-        let data = await axios.get('http://127.0.0.1:3000/rows')
+        // let data = await axios.get('https://www.easy-mock.com/mock/5aaf58ca4208430f514c6df5/electron-api/jobs')
 
-        // console.log(draObj.data);
-        this.tableData2 = data.data
+        // this.tableData2 = data.data.data.rows
     },
     async mounted() {
-        let draObj = await axios.get('http://127.0.0.1:3000/drgobj')
-        this.draObj = draObj.data
+        let draObj = await axios.get('https://www.easy-mock.com/mock/5aaf58ca4208430f514c6df5/electron-api/jobs')
+        
+        this.tableData2 = draObj.data.data.rows
+        this.draObj = draObj.data.data.drgobj
 
         this.$nextTick(() => {
             this.draObj.forEach(item => {
                 $(`#${item.uid}`).draggable({
                     containment: "parent"
                 })
-                // $(`#${item.uid}`).resizable();
             })
 
             this.d3Create()
